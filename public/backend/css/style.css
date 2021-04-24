@@ -37,6 +37,9 @@ ul,label{
 body a:hover{
 	text-decoration:none;
 }
+a.active.styling-edit {
+    font-size: 22px;
+}
 	/*sidebar navigation*/
 #sidebar {
     width:240px;

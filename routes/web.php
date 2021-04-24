@@ -30,8 +30,11 @@ Route::get('/logout', [App\Http\Controllers\AdminController::class, 'logout'])->
 
 //category product
 Route::get('/add-category-product', [App\Http\Controllers\CategoryProduct::class, 'add_category_product'])->name('admin_layout');
+Route::get('/edit-category-product/{category_product_id}', [App\Http\Controllers\CategoryProduct::class, 'edit_category_product'])->name('admin_layout');
+Route::get('/delete-category-product/{category_product_id}', [App\Http\Controllers\CategoryProduct::class, 'delete_category_product'])->name('admin_layout');
 Route::get('/all-category-product', [App\Http\Controllers\CategoryProduct::class, 'all_category_product'])->name('admin_layout');
 Route::post('/save-category-product', [App\Http\Controllers\CategoryProduct::class, 'save_category_product'])->name('admin_layout');
 
 Route::get('/unactive-category-product/{category_product_id}', [App\Http\Controllers\CategoryProduct::class, 'unactive_category_product'])->name('admin_layout');
 Route::get('/active-category-product/{category_product_id}', [App\Http\Controllers\CategoryProduct::class, 'active_category_product'])->name('admin_layout');
+Route::post('/update-category-product/{category_product_id}', [App\Http\Controllers\CategoryProduct::class, 'update_category_product'])->name('admin_layout');

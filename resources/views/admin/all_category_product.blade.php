@@ -72,7 +72,8 @@
             </td>
             <td>1/1/2021</td>
             <td>
-              <a href="" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+              <a href="{{URL::to('/edit-category-product',$cate_pro->category_id)}}" class="active styling-edit" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
+              <a onClick="return confirm('Ban co chac muon xoa?')" href="{{URL::to('/delete-category-product',$cate_pro->category_id)}}" class="active styling-edit" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
             </td>
           </tr>
           @endforeach
