@@ -38,3 +38,24 @@ Route::post('/save-category-product', [App\Http\Controllers\CategoryProduct::cla
 Route::get('/unactive-category-product/{category_product_id}', [App\Http\Controllers\CategoryProduct::class, 'unactive_category_product'])->name('admin_layout');
 Route::get('/active-category-product/{category_product_id}', [App\Http\Controllers\CategoryProduct::class, 'active_category_product'])->name('admin_layout');
 Route::post('/update-category-product/{category_product_id}', [App\Http\Controllers\CategoryProduct::class, 'update_category_product'])->name('admin_layout');
+
+//brand product
+Route::get('/add-brand-product', [App\Http\Controllers\BrandProduct::class, 'add_brand_product'])->name('admin_layout');
+Route::get('/edit-brand-product/{brand_product_id}', [App\Http\Controllers\BrandProduct::class, 'edit_brand_product'])->name('admin_layout');
+Route::get('/delete-brand-product/{brand_product_id}', [App\Http\Controllers\BrandProduct::class, 'delete_brand_product'])->name('admin_layout');
+Route::get('/all-brand-product', [App\Http\Controllers\BrandProduct::class, 'all_brand_product'])->name('admin_layout');
+Route::post('/save-brand-product', [App\Http\Controllers\BrandProduct::class, 'save_brand_product'])->name('admin_layout');
+
+Route::get('/unactive-brand-product/{brand_product_id}', [App\Http\Controllers\BrandProduct::class, 'unactive_brand_product'])->name('admin_layout');
+Route::get('/active-brand-product/{brand_product_id}', [App\Http\Controllers\BrandProduct::class, 'active_brand_product'])->name('admin_layout');
+Route::post('/update-brand-product/{brand_product_id}', [App\Http\Controllers\BrandProduct::class, 'update_brand_product'])->name('admin_layout');
+//product
+Route::get('/add-product', [App\Http\Controllers\ProductController::class, 'add_product'])->name('admin_layout');
+Route::get('/edit-product/{product_id}', [App\Http\Controllers\ProductController::class, 'edit_product'])->name('admin_layout');
+Route::get('/delete-product/{product_id}', [App\Http\Controllers\ProductController::class, 'delete_product'])->name('admin_layout');
+Route::get('/all-product', [App\Http\Controllers\ProductController::class, 'all_product'])->name('admin_layout');
+Route::post('/save-product', [App\Http\Controllers\ProductController::class, 'save_product'])->name('admin_layout');
+
+Route::get('/unactive-product/{product_id}', [App\Http\Controllers\ProductController::class, 'unactive_product'])->name('admin_layout');
+Route::get('/active-product/{product_id}', [App\Http\Controllers\ProductController::class, 'active_product'])->name('admin_layout');
+Route::post('/update-product/{product_id}', [App\Http\Controllers\ProductController::class, 'update_product'])->name('admin_layout');
