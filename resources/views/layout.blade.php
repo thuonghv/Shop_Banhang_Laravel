@@ -115,17 +115,17 @@
 								<li><a href="{{URL::to('/trang chu')}}" class="active">Trang chủ</a></li>
 								<li class="dropdown"><a href="#">Điện thoại<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Phụ kiện</a></li>
-										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
+                                        <li><a href="shop.html">Apple</a></li>
+										<li><a href="product-details.html">Oppo</a></li> 
+										<li><a href="checkout.html">Nokia</a></li> 
+										<li><a href="cart.html">Xiaomi</a></li> 
+										<li><a href="login.html">Sony</a></li> 
                                     </ul>
                                 </li> 
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#">Laptop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
+                                        <li><a href="blog.html">Dell</a></li>
+										<li><a href="blog-single.html">Lenovo</a></li>
                                     </ul>
                                 </li> 
 								<li><a href="404.html">Giới thiệu</a></li>
@@ -219,7 +219,7 @@
 
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="{{URL::to('/danh-muc/' ,$cate->category_id)}}">{{$cate->category_name}}</a></h4>
+									<h4 class="panel-title"><a href="{{URL::to('/danh-muc' ,$cate->category_id)}}">{{$cate->category_name}}</a></h4>
 								</div>
 							</div>
 							@endforeach

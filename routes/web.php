@@ -21,6 +21,10 @@ Route::get('/trang chu', function () {
 Route::get('/trang chu', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//danh muc trang chu
+Route::get('/danh-muc/{category_id}', [App\Http\Controllers\CategoryProduct::class, 'show_category_home'])->name('home');
+Route::get('/thuong-hieu/{brand_id}', [App\Http\Controllers\BrandProduct::class, 'show_brand_home'])->name('home');
+Route::get('/chi-tiet-san-pham/{product_id}', [App\Http\Controllers\ProductController::class, 'details_product'])->name('home');
 
 //backend
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('login_admin');

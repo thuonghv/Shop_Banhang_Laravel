@@ -82,4 +82,16 @@ class CategoryProduct extends Controller
         Session::put('message','Xoa Danh mục sản phẩm thành công');
         return Redirect::to('all-category-product');
     }
+    //end of admin
+
+    public function show_category_home($category_id){
+        $cate_product = DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
+        $brand_product = DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();
+        /* $product = DB::table('tbl_product')->where('product_status','1')->orderby('product_id','desc')->limit(4)->get(); */
+        $category_by_id = DB::table('tbl_product')->where('product_status','1')->orderby('product_id','desc')
+        ->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')
+        ->where('tbl_product.category_id',$category_id)->get();
+        $cate_name = DB::table('tbl_category_product')->where('tbl_category_product.category_id',$category_id)->limit(1)->get();
+        return view('pages.show_category')->with('category',$cate_product)->with('brand',$brand_product)->with('category_by_id',$category_by_id)->with('cate_name',$cate_name);
+    }
 }
