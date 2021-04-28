@@ -45,10 +45,10 @@
               </label>
             </th>
             <th>Tên san pham </th>
-            <th>gia </th>
-            <th>anh </th>
-            <th>danh muc </th>
-            <th>thuong hieu </th>
+            <th>Giá bán </th>
+            <th>Ảnh </th>
+            <th>Danh mục </th>
+            <th>Thương hiệu </th>
             <th>Trạng thái</th>
             <th>Ngày thêm</th>
             <th style="width:30px;"></th>
