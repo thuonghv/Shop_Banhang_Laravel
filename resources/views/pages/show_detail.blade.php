@@ -36,15 +36,19 @@
 								<h2>{{$detail->product_name}}</h2>
 								<p>SKU: {{$detail->product_id}}</p>
 								<img src="images/product-details/rating.png" alt="" />
+								<form action="{{URL::to('/save-cart')}}" method="POST">
+								{{csrf_field()}}
 								<span>
 									<span>{{number_format($detail->product_price)." "."₫"}}</span>
 									<label>Số lương:</label>
-									<input type="number" min="1" value="1" />
-									<button type="button" class="btn btn-fefault cart">
+									<input name="qty" type="number" min="1" value="1" />
+									<input name="productid_hidden" type="hidden" value="{{$detail->product_id}}" />
+									<button type="submit" class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
 										Thêm vào giỏ hàng
 									</button>
 								</span>
+								</form>
 								<p><b>Trạng thái:</b> Còn hàng</p>
 								<p><b>Phân loại:</b> New</p>
 								<p><b>Thương hiệu:</b>{{$detail->brand_name}}</p>

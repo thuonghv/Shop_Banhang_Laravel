@@ -63,3 +63,9 @@ Route::post('/save-product', [App\Http\Controllers\ProductController::class, 'sa
 Route::get('/unactive-product/{product_id}', [App\Http\Controllers\ProductController::class, 'unactive_product'])->name('admin_layout');
 Route::get('/active-product/{product_id}', [App\Http\Controllers\ProductController::class, 'active_product'])->name('admin_layout');
 Route::post('/update-product/{product_id}', [App\Http\Controllers\ProductController::class, 'update_product'])->name('admin_layout');
+
+//gio hang
+Route::post('/save-cart', [App\Http\Controllers\CartController::class, 'save_cart'])->name('home');
+Route::post('/update-cart-qty', [App\Http\Controllers\CartController::class, 'update_cart_qty'])->name('home');
+Route::get('/show-cart', [App\Http\Controllers\CartController::class, 'show_cart'])->name('home');
+Route::get('/delete-to-cart/{rowId}', [App\Http\Controllers\CartController::class, 'delete_to_cart'])->name('home');
