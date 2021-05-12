@@ -69,3 +69,11 @@ Route::post('/save-cart', [App\Http\Controllers\CartController::class, 'save_car
 Route::post('/update-cart-qty', [App\Http\Controllers\CartController::class, 'update_cart_qty'])->name('home');
 Route::get('/show-cart', [App\Http\Controllers\CartController::class, 'show_cart'])->name('home');
 Route::get('/delete-to-cart/{rowId}', [App\Http\Controllers\CartController::class, 'delete_to_cart'])->name('home');
+
+//thanh toan
+Route::get('/login-checkout', [App\Http\Controllers\CheckoutController::class, 'login_checkout'])->name('home');
+Route::get('/logout-checkout', [App\Http\Controllers\CheckoutController::class, 'logout_checkout'])->name('home');
+Route::post('/add-customer', [App\Http\Controllers\CheckoutController::class, 'add_customer'])->name('home');
+Route::post('/login-customer', [App\Http\Controllers\CheckoutController::class, 'login_customer'])->name('home');
+Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('home');
+Route::post('/save-checkout-customer', [App\Http\Controllers\CheckoutController::class, 'save_checkout_customer'])->name('home');
